@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>A Little Surprise💝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(circle at center, #2b0a1f, #090009 70%);
+            color: white;
+            font-family: Georgia, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ff2f92;
+            filter: blur(120px);
+            opacity: 0.25;
+            animation: glowmove 6s infinite alternate;
+        }
+
+        @keyframes glowmove {
+            from {
+                transform: scale(0.8);
+            }
+
+            to {
+                transform: scale(1.3);
+            }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .small-text {
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: #d8b4c7;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 15px;
+            text-shadow:
+                0 0 10px #ff4da6,
+                0 0 25px #ff4da6;
+        }
+
+        .subtitle {
+            color: #d6c1cc;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        button {
+            padding: 14px 32px;
+            border: 1px solid#ff4da6;
+            border-radius: 30px;
+            background: rgba(225, 77, 166, 0.08);
+            color: white;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: #ff4da6;
+            box-shadow:
+                0 0 15px #ff4da6,
+                0 0 35px #ff4da6;
+            transform: scale(1.05);
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4da6;
+            font-size: 18px;
+            animation: float 6s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(2) {
+            left: 25%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(3) {
+            left: 70%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 85%;
+            animation-delay: 4s;
+        }
+
+        .birthday-section {
+            position: relative;
+            min-height: 100dvh;
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            background: radial-gradient(circle at center, #3a102d, #100812 70%);
+            color: white;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .birthday-content {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .heart {
+            font-size: 55px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .birthday-content h1 {
+            font-size: 42px;
+            margin: 20px 0;
+            color: #ffb6d9;
+            text-shadow: 0 0 20px #ff4f9a;
+        }
+
+        .birthday-content p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #f5dce9;
+            margin: 18px 0;
+        }
+
+        .continue-btn {
+            margin-top: 25px;
+            padding: 13px 28px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff4f9a, #ff8fc7);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 79, 154, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+
+
+        .balloon {
+            position: absolute;
+            bottom: -120px;
+            width: 55px;
+            height: 70px;
+            border-radius: 50% 50% 45% 45%;
+            animation: balloonFloat 9s linear infinite;
+        }
+
+        .balloon::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            bottom: -5px;
+            background: inherit;
+            left: 24px;
+            transform: rotate(45deg);
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 75px;
+            background: rgba(255, 255, 255, 0.7);
+            left: 50%;
+            top: 68px;
+        }
+
+        .pink {
+            background: #ff4f9a;
+        }
+
+        .purple {
+            background: #b56cff;
+        }
+
+        .white {
+            background: #ffffff;
+        }
+
+        .peach {
+            background: #ff9f8a;
+        }
+
+        .magenta {
+            background: pink;
+        }
+
+        .balloon:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 38%;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 55%;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 72%;
+            animation-delay: 3s;
+        }
+
+        .balloon:nth-child(6) {
+            left: 88%;
+            animation-delay: 5s;
+        }
+
+        .balloon:nth-child(7) {
+            left: 92%;
+            animation-delay: 1.5s;
+        }
+
+        .balloon:nth-child(8) {
+            left: 95%;
+            animation-delay: 4.5s;
+        }
+
+        @keyframes balloonFloat {
+            0% {
+                transform: translateY(0) rotate(-4deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-55vh) rotate(4deg);
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(-4deg);
+                opacity: 0;
+            }
+        }
+
+        .day3-section {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: radial-gradient(circle at center, #2d1026, #090009 75%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .day3-content {
+            width: 100%;
+            max-width: 700px;
+            animation: day3Fade 2s ease;
+        }
+
+        .day3-small {
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: #d8b4c7;
+            margin-bottom: 25px;
+        }
+
+        .day3-content h1 {
+            font-size: 36px;
+            font-weight: normal;
+            color: #ffb6d9;
+            text-shadow:
+                0 0 10px #ff4da6,
+                0 0 25px #ff4da6;
+            margin-bottom: 35px;
+        }
+
+        .day3-line {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #f5dce9;
+            margin: 10px 0;
+            opacity: 0;
+            animation: lineAppear 1.5s ease forwards;
+        }
+
+        .day3-line:nth-of-type(1) {
+            animation-delay: 1s;
+        }
+
+        .day3-line:nth-of-type(2) {
+            animation-delay: 2s;
+        }
+
+        .day3-line:nth-of-type(3) {
+            animation-delay: 3s;
+        }
+
+        .day3-final {
+            margin-top: 40px;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ffd6e9;
+            opacity: 0;
+            animation: lineAppear 1.5s ease forwards;
+            animation-delay: 4s;
+        }
+
+        @keyframes day3Fade {
+            from {
+                opacity: 0;
+                transform: scale(0.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lineAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photo-container {
+            width: 100%;
+            max-width: 320px;
+            margin: 35px auto 0;
+        }
+
+        .day3-photo {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 182, 217, 0.5);
+            box-shadow: 0 0 20px rgba(255, 79, 154, 0.35),
+                0 0 50px rgba(255, 79, 154, 0.15);
+            animation: photoAppear 1.5s ease;
+        }
+
+        .photo-caption {
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f5dce9;
+            font-style: italic;
+        }
+
+        @keyframes photoAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.94);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .photo-section {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: radial-gradient(circle at center, #321126, #090009 75%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .photo-content {
+            width: 100%;
+            max-width: 500px;
+            animation: photoScreenFade 1.5s ease;
+        }
+
+        .photo-small {
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: #d8b4c7;
+            margin-bottom: 25px;
+        }
+
+        .photo-section .day3-photo {
+            width: 100%;
+            max-width: 320px;
+            max-height: 430px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 182, 217, 0.5);
+            box-shadow: 0 0 20px rgba(255, 79, 154, 0.35);
+            animation: photoAppear 1.5s ease;
+        }
+
+        .photo-section .photo-caption {
+            margin-top: 18px;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #f5dce9;
+            font-style: italic;
+        }
+
+        @keyframes photoScreenFade {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media(max-width:600px) {
+            .photo-section {
+                min-height: 100dvh;
+                height: 100dvh;
+                padding: 20px 16px;
+                box-sizing: border-box;
+                overflow-y: auto;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            .photo-content {
+                max-width: 100%;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .photo-small {
+                font-size: 11px;
+                letter-spacing: 3px;
+                margin-bottom: 14px;
+            }
+
+            .photo-section .day3-photo {
+                max-width: 280px;
+                max-height: 48vh;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 14px;
+            }
+
+            .photo-section .photo-caption {
+                margin-top: 14px;
+                font-size: 15px;
+                line-height: 1.5px;
+                padding: 0 8px;
+            }
+
+            .photo-section .continue-btn {
+                margin-top: 16px;
+                padding: 12px 24px;
+                font-size: 14px;
+                width: fit-content;
+            }
+        }
+
+        .photo-section {
+            position: relative;
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+
+            background: radial-gradient(circle at center, #321126, #090009 75%);
+            color: white;
+
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .photo-content {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .photo-small {
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: #d8b4c7;
+            margin-bottom: 15px;
+        }
+
+        .photo-section .day3-photo {
+            display: block;
+
+            width: auto;
+            max-width: 90%;
+            height: auto;
+
+            max-height: 50vh;
+
+            object-fit: contain;
+
+            margin: 0 auto;
+
+            border-radius: 18px;
+            border: 1px solid rgba(255, 182, 217, 0.5);
+
+            box-shadow:
+                0 0 20px rgba(255, 79, 154, 0.35),
+                0 0 50px rgba(255, 79, 154, 0.15);
+        }
+
+        .photo-section .photo-caption {
+            margin: 14px auto 0;
+
+            max-width: 450px;
+
+            font-size: 16px;
+            line-height: 1.5;
+
+            color: #f5dce9;
+            font-style: italic;
+        }
+
+        .photo-section .continue-btn {
+            display: block;
+
+            margin: 16px auto 5px;
+
+            padding: 11px 25px;
+
+            font-size: 15px;
+
+            max-width: 90%;
+        }
+
+        .final-section {
+            position: relative;
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 25px;
+            box-sizing: border-box;
+
+            background: radial-gradient(circle at center, #3a102d, #090009 75%);
+            color: white;
+
+            overflow-y: auto;
+        }
+
+        .final-content {
+            width: 100%;
+            max-width: 650px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .final-heart {
+            font-size: 45px;
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .final-content h1 {
+            font-size: 34px;
+            font-weight: normal;
+            color: #ffb6d9;
+
+            text-shadow:
+                0 0 10px #ff4da6,
+                0 0 25px #ff4da6;
+
+            margin-bottom: 25px;
+        }
+
+        .final-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f5dce9;
+            margin: 15px 0;
+        }
+
+        .final-signature {
+            margin-top: 30px !important;
+            color: #ffd6e9 !important;
+            font-style: italic;
+        }
+
+        .question-section {
+            position: relative;
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+            box-sizing: border-box;
+            background: radial-gradient(circle at center, #321126, #090009 75%);
+            color: white;
+            overflow-y: auto;
+        }
+
+        .question-content {
+            width: 100%;
+            max-width: 600px;
+            animation: photoScreenFade 1.5s ease;
+        }
+
+        .question-small {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #d8b4c7;
+            margin-bottom: 25px;
+        }
+
+        .question-content h1 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #ffb6d9;
+            margin-bottom: 35px;
+        }
+
+        .question-pause {
+            font-size: 18px;
+            color: #f5dce9;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        .question-content h2 {
+            font-size: 27px;
+            font-weight: normal;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .answer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .answer-btn {
+            padding: 13px 22px;
+            border: 1px solid #ff4da6;
+            border-radius: 30px;
+            background: rgba(255, 77, 166, 0.08);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .answer-btn:hover {
+            background: #ff4da6;
+            box-shadow: 0 0 20px #ff4da6;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ffd6e9;
+            font-style: italic;
+            opacity: 0;
+        }
+
+        .answer-text.show {
+            animation: lineAppear 1s ease forwards;
+        }
+
+        .final-next-btn {
+            margin-top: 25px;
+        }
+
+        @media(max-width:600px) {
+
+            .question-section {
+                padding: 20px 16px;
+            }
+
+            .question-content h1 {
+                font-size: 22px;
+            }
+
+            .question-pause {
+                font-size: 16px;
+            }
+
+            .question-content h2 {
+                font-size: 23px;
+            }
+
+            .answer-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .answer-btn {
+                width: fit-content;
+                max-width: 90%;
+            }
+        }
+
+        .final-section.reveal {
+            animation: finalReveal 2s ease forwards;
+        }
+
+        @keyframes finalReveal {
+            from {
+                opacity: 0;
+                transform: scale(0.92);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+    <div class="heart">💗</div>
+    <div class="heart">💓</div>
+    <div class="heart">💗</div>
+    <div class="heart">💓</div>
+    <div class="container opening-screen">
+        <div class=" small-text">
+            A LITTLE SOMETHING, MADE JUST FOR YOU...
+        </div>
+        <h1>One small surprise made with alot of thought....✨</h1>
+        <div class="subtitle">
+            Take a deep breathe..
+            And dont rush this....😊
+        </div>
+        <button class="open-btn" onclick="startSurprise()">
+            Open the Surprise
+        </button>
+    </div>
+    <section class="birthday-section" id="birthdaySection">
+        <div class="balloons">
+            <div class="balloon pink"></div>
+            <div class="balloon purple"></div>
+            <div class="balloon white"></div>
+            <div class="balloon peach"></div>
+            <div class="balloon magenta"></div>
+            <div class="balloon white"></div>
+            <div class="balloon pink"></div>
+            <div class="balloon peach"></div>
+        </div>
+        <div class="birthday-content">
+            <div class="heart">♥</div>
+            <h1>Happy Birthday, Beautiful✨</h1>
+            <p>
+                Today is special for a simple reason.....
+                It's the day someone truly special came into this world...💗
+            </p>
+            <p>
+                I hope this makes you smile, even if it's just for a moment...🌻
+            </p>
+            <button class="continue-btn">
+                There's More...💕
+            </button>
+        </div>
+    </section>
+    <section class="day3-section" id="day3Section">
+        <div class="day3-content">
+            <div class="day3-small">
+                A FEW MOMENTS, A LOT OF SMILES...
+            </div>
+            <h1>Not every special friendship needs years to become special...✨</h1>
+            <p class="day3-line">
+                Sometimes, a few conversations...
+            </p>
+            <p class="day3-line">
+                A few laughs...
+            </p>
+            <p class="day3-line">
+                And a few moments are enough...
+            </p>
+            <p class="day3-final">
+                And I'm genuinely glad that you're a part of them...♥
+            </p>
+            <button class="continue-btn" onclick="showPhoto1()">
+                There's something more...✨
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photoSection">
+        <div class="photo-content">
+            <div class="photo-small">
+                A LITTLE MOMENT...✨
+            </div>
+            <img src="images/photo1.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                Maybe this is just a random snap for you...
+                but somehow, it didn,t feel random to me... 💗
+            </p>
+            <button class="continue-btn" onclick="showPhoto2()">
+                NEXT ONE...✨
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photo2Section">
+        <div class="photo-content">
+            <div class="photo-small">
+                ANOTHER LITTLE MOMENT...✨
+            </div>
+            <img src="images/photo2.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                Okay... the outfit,the look, and that dimple,Enough said...🌻
+            </p>
+            <button class="continue-btn" onclick="showPhoto3()">
+                Keep Going...✨
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photo3Section">
+        <div class="photo-content">
+            <div class="photo-small">
+                AND THEN ,THIS ONE...✨
+            </div>
+            <img src="images/photo3.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                I dont't know how you do it...but even the unplanned moments look beautiful on you...😊
+            </p>
+            <button class="continue-btn" onclick="showPhoto4()">
+                One more for the collection...✨
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photo4Section">
+        <div class="photo-content">
+            <div class="photo-small">
+                ONE THAT DESERVES TO STAY...🤍
+            </div>
+            <img src="images/photo4.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                No matter where you are looking, that little dimple is stealing all the attention...😅
+            </p>
+            <button class="continue-btn" onclick="showPhoto5()">
+                And Here We Continue...😌
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photo5Section">
+        <div class="photo-content">
+            <div class="photo-small">
+                AND THIS ONE DESERVES A PLACE TOO...🤍
+            </div>
+            <img src="images/photo5.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                That dress, those open hairs, you and your smile... How could everything be this perfect at the same
+                time...🤔😅
+            </p>
+            <button class="continue-btn" onclick="showPhoto6()">
+                One Last Special Tweak..✨
+            </button>
+        </div>
+    </section>
+    <section class="photo-section" id="photo6Section">
+        <div class="photo-content">
+            <div class="photo-small">
+                THE LAST ONE BUT SOMEHOW IT'S THE FIRST ONE...😊
+            </div>
+            <img src="images/photo6.jpeg" class="day3-photo">
+            <p class="photo-caption">
+                And somehow, among all the little moments, this one feels a little extra special..💝
+            </p>
+            <button class="continue-btn" onclick="showQuestion()">
+                I think that's enough pictures for today...😇
+            </button>
+        </div>
+    </section>
+    <section class="question-section" id="questionSection">
+        <div class="question-content">
+
+            <p class="question-pause">
+            <h1> Wait... I have a question for you...👀</h1>
+            </p>
+
+            <h2>Did this make you smile?</h2>
+
+            <div class="answer-buttons">
+                <button class="answer-btn" onclick="showAnswer('yes')">
+                    Yes, obviously 😌
+                </button>
+
+                <button class="answer-btn" onclick="showAnswer('no')">
+                    No, not much🙂
+                </button>
+            </div>
+
+            <p class="answer-text" id="answerText"></p>
+
+            <button class="continue-btn final-next-btn" id="finalNextBtn" onclick="showFinalSection()"
+                style="display:none;">
+                One last thing...✨
+            </button>
+
+        </div>
+    </section>
+    <section class="final-section" id="finalSection">
+        <div class="final-content">
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <h1>And that's all...✨</h1>
+
+            <p>
+                Thank you for taking a few minutes to open this little surprise.
+            </p>
+
+            <p>
+                I just wish you stay happy today, may all your worries disappear, and may the days ahead bring you
+                everything you quietly wished for...💟
+            </p>
+
+            <p>
+                Keep smiling, keep shining, and keep being the wonderful person you are.🌻
+            </p>
+
+            <p class="final-signature">
+                Happy Birthday.💗<br><br>
+                — Made with ❤️ by Lovkesh
+            </p>
+
+        </div>
+    </section>
+    <script>
+        const openButton = document.querySelector(".open-btn");
+        const openingScreen = document.querySelector(".container");
+        const birthdaySection = document.getElementById("birthdaySection");
+        const continueButton = document.querySelector(".continue-btn");
+        const day3Section = document.getElementById("day3Section");
+        const photoSection = document.getElementById("photoSection");
+        const photo2section = document.getElementById("photo2Section");
+        const photo3Section = document.getElementById("photo3Section");
+        const photo4Section = document.getElementById("photo4Section");
+        const photo5Section = document.getElementById("photo5Section");
+        const photo6Section = document.getElementById("photo6Section");
+        const questionSection = document.getElementById("questionSection")
+        const finalSection = document.getElementById("finalSection");
+
+        openButton.addEventListener("click", () => {
+            openingScreen.style.display = "none";
+            birthdaySection.style.display = "flex";
+        });
+        continueButton.addEventListener("click", () => {
+            birthdaySection.style.display = "none";
+            day3Section.style.display = "flex";
+        });
+        function showPhoto1() {
+            day3Section.style.display = "none";
+            photoSection.style.display = "flex";
+        }
+        function showPhoto2() {
+            photoSection.style.display = "none";
+            photo2section.style.display = "flex";
+        }
+        function showPhoto3() {
+            photo2section.style.display = "none";
+            photo3Section.style.display = "flex";
+        }
+        function showPhoto4() {
+            photo3Section.style.display = "none";
+            photo4Section.style.display = "flex";
+        }
+        function showPhoto5() {
+            photo4Section.style.display = "none";
+            photo5Section.style.display = "flex";
+        }
+        function showPhoto6() {
+            photo5Section.style.display = "none";
+            photo6Section.style.display = "flex";
+        }
+        function showQuestion() {
+            photo6Section.style.display = "none";
+            questionSection.style.display = "flex";
+        }
+
+        function showAnswer(answer) {
+            const answerText = document.getElementById("answerText");
+            const finalNextBtn = document.getElementById("finalNextBtn");
+
+            if (answer === "yes") {
+                answerText.textContent = "That's all I wanted. 😊";
+            } else {
+                answerText.textContent = "Hmm… I'll try a little harder next time. 🙂";
+            }
+
+            answerText.classList.remove("show");
+
+            void answerText.offsetWidth;
+
+            answerText.classList.add("show");
+
+            finalNextBtn.style.display = "block";
+        }
+        function showFinalSection() {
+            questionSection.style.display = "none";
+            finalSection.classList.remove("reveal");
+
+            void finalSection.offsetWidth;
+
+            finalSection.style.display = "flex";
+            finalSection.classList.add("reveal");
+        }
+    </script>
+</body>
+
+</html>
